@@ -1,0 +1,92 @@
+https://en.wikipedia.org/wiki/Whitespace_character
+https://de.wikipedia.org/wiki/Leerraum
+https://en.wikipedia.org/wiki/Unicode_character_property
+https://de.wikipedia.org/wiki/Liste_der_Unicode-Eigenschaften
+
+http://unicode.org
+http://unicode.org/L2/L2002/02368-default-ignorable.pdf
+
+
+http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:White_Space=Yes:]
+
+25 Code Points
+
+[\u0009-\u000D \u0085 \u2028 \u2029 \u0020\u3000\u1680\u2000-\u2006\u2008-\u200A\u205F\u00A0\u2007\u202F]
+
+Cc U+0009 CHARACTER TABULATION :	
+Cc U+000A LINE FEED (LF) :
+Cc U+000B LINE TABULATION :
+Cc U+000C FORM FEED (FF) :
+Cc U+000D CARRIAGE RETURN (CR) :
+Zs U+0020 SPACE : 
+Cc U+0085 NEXT LINE (NEL) :
+Zs U+00A0 NO-BREAK SPACE : 
+Zs U+1680 OGHAM SPACE MARK : 
+Zs U+2000 EN QUAD : 
+Zs U+2001 EM QUAD : 
+Zs U+2002 EN SPACE : 
+Zs U+2003 EM SPACE : 
+Zs U+2004 THREE-PER-EM SPACE : 
+Zs U+2005 FOUR-PER-EM SPACE : 
+Zs U+2006 SIX-PER-EM SPACE : 
+Zs U+2007 FIGURE SPACE : 
+Zs U+2008 PUNCTUATION SPACE : 
+Zs U+2009 THIN SPACE : 
+Zs U+200A HAIR SPACE : 
+Zl U+2028 LINE SEPARATOR : 
+Zp U+2029 PARAGRAPH SEPARATOR : 
+Zs U+202F NARROW NO-BREAK SPACE : 
+Zs U+205F MEDIUM MATHEMATICAL SPACE : 
+Zs U+3000 IDEOGRAPHIC SPACE :　
+
+
+http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:Pattern_White_Space=Yes:]
+
+11 Code Points
+
+[\u200E\u200F \u0009-\u000D \u0085 \u2028 \u2029 \u0020]
+
+Cc U+0009 CHARACTER TABULATION :	
+Cc U+000A LINE FEED (LF) :
+Cc U+000B LINE TABULATION :
+Cc U+000C FORM FEED (FF) :
+Cc U+000D CARRIAGE RETURN (CR) :
+Zs U+0020 SPACE : 
+Cc U+0085 NEXT LINE (NEL) :
+Cf U+200E LEFT-TO-RIGHT MARK :‎
+Cf U+200F RIGHT-TO-LEFT MARK :‏
+Zl U+2028 LINE SEPARATOR : 
+Zp U+2029 PARAGRAPH SEPARATOR : 
+
+
+http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:General_Category=Space_Separator:]
+
+17 Code Points
+
+[\u0020\u3000\u1680\u2000-\u2006\u2008-\u200A\u205F\u00A0\u2007\u202F]
+
+Zs U+0020 SPACE : 
+Zs U+00A0 NO-BREAK SPACE : 
+Zs U+1680 OGHAM SPACE MARK : 
+Zs U+2000 EN QUAD : 
+Zs U+2001 EM QUAD : 
+Zs U+2002 EN SPACE : 
+Zs U+2003 EM SPACE : 
+Zs U+2004 THREE-PER-EM SPACE : 
+Zs U+2005 FOUR-PER-EM SPACE : 
+Zs U+2006 SIX-PER-EM SPACE : 
+Zs U+2007 FIGURE SPACE : 
+Zs U+2008 PUNCTUATION SPACE : 
+Zs U+2009 THIN SPACE : 
+Zs U+200A HAIR SPACE : 
+Zs U+202F NARROW NO-BREAK SPACE : 
+Zs U+205F MEDIUM MATHEMATICAL SPACE : 
+Zs U+3000 IDEOGRAPHIC SPACE :　
+
+
+http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:Default_Ignorable_Code_Point=Yes:]
+
+4,173 Code Points
+
+[\u00AD\u034F\u061C\u17B4\u17B5\u180B-\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFE00-️\uFEFF\U0001BCA0-\U0001BCA3\U0001D173-\U0001D17A\U000E0001\U000E0020-\U000E007F\U000E0100-\U000E01EF \u115F \u1160\u3164\uFFA0 \u2065 \uFFF0-\uFFF8 \U000E0000 \U000E0002-\U000E001F \U000E0080-\U000E00FF \U000E01F0-\U000E0FFF]
+
