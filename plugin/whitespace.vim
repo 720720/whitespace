@@ -3,7 +3,7 @@ if exists('g:whitespace_loaded') || &compatible
 endif
 let g:whitespace_loaded = 1
 
-let g:whitespace_chars = get(g:, 'whitespace_chars', '[\u0009\u0020\u00a0\u1680\u180e\u2000-\u200d\u202f\u205f\u2060\u3000\ufeff]')
+let g:whitespace_chars = get(g:, 'whitespace_chars', '[\u0009\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]')
 let g:whitespace_show = get(g:, 'whitespace_show', 1)
 let g:whitespace_strip = get(g:, 'whitespace_strip', 1)
 
