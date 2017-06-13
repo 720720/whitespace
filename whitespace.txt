@@ -1,12 +1,3 @@
-https://en.wikipedia.org/wiki/Whitespace_character
-https://de.wikipedia.org/wiki/Leerraum
-https://en.wikipedia.org/wiki/Unicode_character_property
-https://de.wikipedia.org/wiki/Liste_der_Unicode-Eigenschaften
-
-http://unicode.org
-http://unicode.org/L2/L2002/02368-default-ignorable.pdf
-
-
 http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:White_Space=Yes:]
 
 25 Code Points

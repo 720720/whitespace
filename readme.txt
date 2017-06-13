@@ -5,6 +5,14 @@
 
 
 
+https://en.wikipedia.org/wiki/Whitespace_character
+https://de.wikipedia.org/wiki/Leerraum
+https://en.wikipedia.org/wiki/Unicode_character_property
+https://de.wikipedia.org/wiki/Liste_der_Unicode-Eigenschaften
+
+http://unicode.org
+http://unicode.org/L2/L2002/02368-default-ignorable.pdf
+
 https://github.com/ntpeters/vim-better-whitespace
 http://sartak.org/2011/03/end-of-line-whitespace-in-vim.html
 http://vimcasts.org/episodes/tidying-whitespace/
