@@ -1,3 +1,28 @@
+http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:General_Category=Space_Separator:]
+
+17 Code Points
+
+[\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]
+
+Zs U+0020 SPACE : 
+Zs U+00A0 NO-BREAK SPACE : 
+Zs U+1680 OGHAM SPACE MARK : 
+Zs U+2000 EN QUAD : 
+Zs U+2001 EM QUAD : 
+Zs U+2002 EN SPACE : 
+Zs U+2003 EM SPACE : 
+Zs U+2004 THREE-PER-EM SPACE : 
+Zs U+2005 FOUR-PER-EM SPACE : 
+Zs U+2006 SIX-PER-EM SPACE : 
+Zs U+2007 FIGURE SPACE : 
+Zs U+2008 PUNCTUATION SPACE : 
+Zs U+2009 THIN SPACE : 
+Zs U+200A HAIR SPACE : 
+Zs U+202F NARROW NO-BREAK SPACE : 
+Zs U+205F MEDIUM MATHEMATICAL SPACE : 
+Zs U+3000 IDEOGRAPHIC SPACE :　
+
+
 http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:White_Space=Yes:]
 
 25 Code Points
@@ -48,31 +73,6 @@ Cf U+200E LEFT-TO-RIGHT MARK :‎
 Cf U+200F RIGHT-TO-LEFT MARK :‏
 Zl U+2028 LINE SEPARATOR : 
 Zp U+2029 PARAGRAPH SEPARATOR : 
-
-
-http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:General_Category=Space_Separator:]
-
-17 Code Points
-
-[\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]
-
-Zs U+0020 SPACE : 
-Zs U+00A0 NO-BREAK SPACE : 
-Zs U+1680 OGHAM SPACE MARK : 
-Zs U+2000 EN QUAD : 
-Zs U+2001 EM QUAD : 
-Zs U+2002 EN SPACE : 
-Zs U+2003 EM SPACE : 
-Zs U+2004 THREE-PER-EM SPACE : 
-Zs U+2005 FOUR-PER-EM SPACE : 
-Zs U+2006 SIX-PER-EM SPACE : 
-Zs U+2007 FIGURE SPACE : 
-Zs U+2008 PUNCTUATION SPACE : 
-Zs U+2009 THIN SPACE : 
-Zs U+200A HAIR SPACE : 
-Zs U+202F NARROW NO-BREAK SPACE : 
-Zs U+205F MEDIUM MATHEMATICAL SPACE : 
-Zs U+3000 IDEOGRAPHIC SPACE :　
 
 
 http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:Default_Ignorable_Code_Point=Yes:]
