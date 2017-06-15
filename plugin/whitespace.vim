@@ -1,7 +1,7 @@
-if exists('g:whitespace_loaded') || &compatible
+if exists('g:loaded_whitespace') || &compatible
   finish
 endif
-let g:whitespace_loaded = 1
+let g:loaded_whitespace = 1
 
 let g:whitespace_chars = get(g:, 'whitespace_chars', '[\u0009\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]')
 let g:whitespace_show = get(g:, 'whitespace_show', 1)
