@@ -2,7 +2,7 @@ http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:General_Category=Space_S
 
 17 Code Points
 
-[\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]
+[\U0020\U00A0\U1680\U2000-\U200A\U202F\U205F\U3000]
 
 Zs U+0020 SPACE : 
 Zs U+00A0 NO-BREAK SPACE : 
@@ -27,7 +27,7 @@ http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:White_Space=Yes:]
 
 25 Code Points
 
-[\u0009-\u000D\u0020\u0085\u00A0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]
+[\U0009-\U000D\U0020\U0085\U00A0\U1680\U2000-\U200A\U2028\U2029\U202F\U205F\U3000]
 
 Cc U+0009 CHARACTER TABULATION :	
 Cc U+000A LINE FEED (LF) :
@@ -60,7 +60,7 @@ http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:Pattern_White_Space=Yes:
 
 11 Code Points
 
-[\u0009-\u000D\u0020\u0085\u200E\u200F\u2028\u2029]
+[\U0009-\U000D\U0020\U0085\U200E\U200F\U2028\U2029]
 
 Cc U+0009 CHARACTER TABULATION :	
 Cc U+000A LINE FEED (LF) :
@@ -79,5 +79,5 @@ http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:Default_Ignorable_Code_P
 
 4,173 Code Points
 
-[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180E\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFEFF\uFFA0\uFFF0-\uFFF8\u1BCA0-\u1BCA3\u1D173-\u1D17A\uE0000-\uE0FFF]
+[\U00AD\U034F\U061C\U115F\U1160\U17B4\U17B5\U180B-\U180E\U200B-\U200F\U202A-\U202E\U2060-\U206F\U3164\UFE00-\UFEFF\UFFA0\UFFF0-\UFFF8\U1BCA0-\U1BCA3\U1D173-\U1D17A\UE0000-\UE0FFF]
 

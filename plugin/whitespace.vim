@@ -6,7 +6,7 @@ let g:loaded_whitespace = 1
 let g:whitespace_show = get(g:, 'whitespace_show', 1)
 let g:whitespace_trim = get(g:, 'whitespace_trim', 1)
 let g:whitespace_skip = get(g:, 'whitespace_skip', ['markdown'])
-let g:whitespace_code = get(g:, 'whitespace_code', '[\u0009\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]')
+let g:whitespace_code = get(g:, 'whitespace_code', '[\U0009\U0020\U00A0\U1680\U2000-\U200A\U202F\U205F\U3000]')
 
 command -range=% Trim call whitespace#trim(<line1>, <line2>)
 
