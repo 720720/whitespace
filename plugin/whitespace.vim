@@ -3,30 +3,40 @@ if exists('g:loaded_whitespace') || &compatible
 endif
 let g:loaded_whitespace = 1
 
-let g:whitespace_chars = get(g:, 'whitespace_chars', '[\u0009\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]')
 let g:whitespace_show = get(g:, 'whitespace_show', 1)
-let g:whitespace_strip = get(g:, 'whitespace_strip', 1)
+let g:whitespace_trim = get(g:, 'whitespace_trim', 1)
+let g:whitespace_skip = get(g:, 'whitespace_skip', ['markdown'])
+let g:whitespace_code = get(g:, 'whitespace_code', '[\u0009\u0020\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]')
 
-highlight whitespace ctermbg=red guibg=red
+command -range=% Trim call whitespace#trim(<line1>, <line2>)
 
-if g:whitespace_show == 1
-  execute 'match whitespace /' . g:whitespace_chars . '\+\%#\@<!$/'
-endif
-
-function! whitespace#strip(line1,line2)
-  let _s=@/
-  let l = line('.')
-  let c = col('.')
-  execute a:line1 . ',' . a:line2 . 's/' . g:whitespace_chars . '\+$//e'
-  let @/=_s
-  call cursor(l, c)
+function! whitespace#trim(line1, line2)
+  let l:view = winsaveview()
+  execute 'keeppatterns' . a:line1 . ',' . a:line2 . 's/' . g:whitespace_code . '\+$//e'
+  call winrestview(l:view)
 endfunction
 
-if g:whitespace_strip == 1
-  augroup whitespace
-    autocmd!
-    autocmd BufWritePre * call whitespace#strip(0, line('$'))
-  augroup END
-endif
+augroup whitespace
+  autocmd!
+  autocmd BufWritePre * call whitespace#bufwritepre()
+  autocmd InsertEnter * call whitespace#insertenter()
+  autocmd InsertLeave,BufRead,WinEnter * call whitespace#insertleave()
+augroup END
 
-command -range=% WhitespaceStrip call whitespace#strip(<line1>,<line2>)
+function! whitespace#bufwritepre()
+  if g:whitespace_trim == 1 && index(g:whitespace_skip, &filetype) < 0
+    call whitespace#trim(0, line('$'))
+  endif
+endfunction
+
+function! whitespace#insertenter()
+  if g:whitespace_show == 1
+    execute 'match Error /' . g:whitespace_code . '\+\%#\@<!$/'
+  endif
+endfunction
+
+function! whitespace#insertleave()
+  if g:whitespace_show == 1
+    execute 'match Error /' . g:whitespace_code . '\+$/'
+  endif
+endfunction
