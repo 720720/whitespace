@@ -7,6 +7,8 @@
 
 WHITESPACE
 
+https://blog.codinghorror.com/whitespace-the-silent-killer/
+
 https://en.wikipedia.org/wiki/Whitespace_character
 https://de.wikipedia.org/wiki/Leerraum
 https://en.wikipedia.org/wiki/Unicode_character_property
@@ -17,7 +19,7 @@ https://unicode.org/L2/L2002/02368-default-ignorable.pdf
 
 
 
-CODE POINTS
+UNICODE
 
 http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:White_Space=Yes:]
 http://unicode.org/cldr/utility/list-unicodeset.jsp?a=[:Default_Ignorable_Code_Point=Yes:]
@@ -45,6 +47,21 @@ LINKS
 
 http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 http://vim.wikia.com/wiki/Search_and_replace
+
+https://superuser.com/questions/921920/display-trailing-spaces-in-vim
+https://www.guyrutenberg.com/2013/12/07/highlight-whitespace-at-end-of-line-in-vim/
+http://zittlau.ca/more-permanent-trailing-whitespace-highlight-in-vim/
+http://urchin.earth.li/~ian/style/vim.html
+
+http://vimcasts.org/episodes/tidying-whitespace/
+https://technotales.wordpress.com/2010/03/31/preserve-a-vim-function-that-keeps-your-state/
+http://sartak.org/2011/03/end-of-line-whitespace-in-vim.html
+
+
+
+PLUGINS
+
+https://github.com/ntpeters/vim-better-whitespace
 
 
 
