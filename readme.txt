@@ -46,21 +46,21 @@ https://google.github.io/styleguide/vimscriptfull.xml
 LINKS
 
 http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+http://vim.wikia.com/wiki/Remove_unwanted_spaces
 http://vim.wikia.com/wiki/Search_and_replace
 
 https://superuser.com/questions/921920/display-trailing-spaces-in-vim
 https://www.guyrutenberg.com/2013/12/07/highlight-whitespace-at-end-of-line-in-vim/
-http://zittlau.ca/more-permanent-trailing-whitespace-highlight-in-vim/
-http://urchin.earth.li/~ian/style/vim.html
 
 http://vimcasts.org/episodes/tidying-whitespace/
-https://technotales.wordpress.com/2010/03/31/preserve-a-vim-function-that-keeps-your-state/
 http://sartak.org/2011/03/end-of-line-whitespace-in-vim.html
 
 
 
 PLUGINS
 
+https://vimawesome.com/?q=whitespace
+https://github.com/search?l=Vim+script&o=desc&q=whitespace&s=stars&type=Repositories&utf8=%E2%9C%93
 https://github.com/ntpeters/vim-better-whitespace
 
 
@@ -109,6 +109,7 @@ endfunction
 http://vimhelp.appspot.com/eval.txt.html#user-functions
 http://vimhelp.appspot.com/eval.txt.html#winsaveview%28%29
 http://vimhelp.appspot.com/eval.txt.html#winrestview%28%29
+https://stackoverflow.com/questions/19762869/how-do-i-save-the-current-cursor-position-and-load-it-later-in-vimscript
 
 
 execute 'keeppatterns' . a:line1 . ',' . a:line2 . 's/\s\+$\|[\U000B\U000C\U0085]\+//ge'
