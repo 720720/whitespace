@@ -39,12 +39,16 @@ https://devhints.io/vimscript
 https://google.github.io/styleguide/vimscriptguide.xml
 https://google.github.io/styleguide/vimscriptfull.xml
 
-https://stackoverflow.com/questions/13435586/should-i-use-single-or-double-quotes-in-my-vimrc-file
+
+
+LINKS
+
+http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+http://vim.wikia.com/wiki/Search_and_replace
 
 
 
 CODE
-
 
 if exists('g:loaded_whitespace') || &compatible
   finish
@@ -55,6 +59,7 @@ http://vim.wikia.com/wiki/How_to_write_a_plugin
 http://vimhelp.appspot.com/eval.txt.html#exists%28%29
 http://vimhelp.appspot.com/options.txt.html#%27compatible%27
 http://vimhelp.appspot.com/repeat.txt.html#%3Afinish
+https://stackoverflow.com/questions/13435586/should-i-use-single-or-double-quotes-in-my-vimrc-file
 
 
 
@@ -74,6 +79,7 @@ command -range=% Wipe call whitespace#wipe(<line1>, <line2>)
 http://vimhelp.appspot.com/usr_40.txt.html#40.2
 http://vimhelp.appspot.com/eval.txt.html#%3Acall
 http://vimhelp.appspot.com/eval.txt.html#%3Afunction
+https://stackoverflow.com/questions/18178768/vimscript-call-vs-execute
 
 
 
@@ -86,43 +92,119 @@ endfunction
 http://vimhelp.appspot.com/eval.txt.html#user-functions
 http://vimhelp.appspot.com/eval.txt.html#winsaveview%28%29
 http://vimhelp.appspot.com/eval.txt.html#winrestview%28%29
+
+
+execute 'keeppatterns' . a:line1 . ',' . a:line2 . 's/\s\+$\|[\U000B\U000C\U0085]\+//ge'
+
 http://vimhelp.appspot.com/eval.txt.html#%3Aexecute
 http://vimhelp.appspot.com/cmdline.txt.html#%3Akeeppatterns
-
-
-a:line1 . ',' . a:line2 . 's/'
-
-http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-http://vim.wikia.com/wiki/Search_and_replace
-http://vimhelp.appspot.com/change.txt.html#%3Asubstitute
+http://vimhelp.appspot.com/change.txt.html#%3Asubstitute      :[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
 
 
 /\s\+$
+trailing whitespace
 
-http://vimhelp.appspot.com/pattern.txt.html#%2F%5Cs
-http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B
-http://vimhelp.appspot.com/pattern.txt.html#%2F%24
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5Cs           /\s
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B         /\+
+http://vimhelp.appspot.com/pattern.txt.html#%2F%24            /$
 
 
 /[\U000B\U000C\U0085]\+
+1 or more unicode characters
 
-http://vimhelp.appspot.com/pattern.txt.html#%2Fcollection
-http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%25U
-http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5B%5D         /[]
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%25U        /\%U
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B         /\+
 
 
 \|
+or
 
-http://vimhelp.appspot.com/pattern.txt.html#%2Fpattern
+http://vimhelp.appspot.com/pattern.txt.html#%2Fpattern        \|
 
 
 /{string}/
+replace a match of {pattern} with {string}
 
-http://vimhelp.appspot.com/change.txt.html#%3Asubstitute
+http://vimhelp.appspot.com/change.txt.html#%3Asubstitute      //
 
 
 ge
+replace all occurrences in the line
+do not issue an error message
 
-http://vimhelp.appspot.com/change.txt.html#%3As_flags
+http://vimhelp.appspot.com/change.txt.html#%3As_flags         ge
+
+
+
+augroup whitespace
+  autocmd!
+  autocmd BufWritePre * call whitespace#bufwritepre()
+  autocmd InsertEnter * call whitespace#insertenter()
+  autocmd InsertLeave,BufRead,WinEnter * call whitespace#insertleave()
+augroup END
+
+http://vimhelp.appspot.com/autocmd.txt.html
+http://vimhelp.appspot.com/eval.txt.html#%3Acall
+
+
+
+function! whitespace#bufwritepre()
+  if g:whitespace_wipe == 1 && index(g:whitespace_skip, &filetype) < 0
+    call whitespace#wipe(0, line('$'))
+  endif
+endfunction
+
+http://vimhelp.appspot.com/filetype.txt.html
+http://vimhelp.appspot.com/eval.txt.html#index%28%29
+http://vimhelp.appspot.com/eval.txt.html#line%28%29
+
+
+
+function! whitespace#insertenter()
+  if g:whitespace_show == 1
+    execute 'match Error /' . g:whitespace_melt . '\+\%#\@<!$\|' . g:whitespace_burn . '\+/'
+  endif
+endfunction
+
+function! whitespace#insertleave()
+  if g:whitespace_show == 1
+    execute 'match Error /' . g:whitespace_melt . '\+$\|' . g:whitespace_burn . '\+/'
+  endif
+endfunction
+
+http://vimhelp.appspot.com/pattern.txt.html#match-highlight   :mat[ch] {group} /{pattern}/
+
+
+/\s\+\%#\@<!$
+trailing whitespace except when typing at the end of a line
+
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5Cs           /\s
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B         /\+
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%25%23      /\%#
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%40%3C%21   /\@<!
+http://vimhelp.appspot.com/pattern.txt.html#%2F%24            /$
+
+
+/\s\+$
+trailing whitespace
+
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5Cs           /\s
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B         /\+
+http://vimhelp.appspot.com/pattern.txt.html#%2F%24            /$
+
+
+/[\U000B\U000C\U0085]\+
+1 or more unicode characters
+
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5B%5D         /[]
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%25U        /\%U
+http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B         /\+
+
+
+\|
+or
+
+http://vimhelp.appspot.com/pattern.txt.html#%2Fpattern        \|
 
 
