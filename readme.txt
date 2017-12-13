@@ -120,7 +120,7 @@ https://stackoverflow.com/questions/18178768/vimscript-call-vs-execute
 
 function! whitespace#wipe(line1, line2)
   let l:view = winsaveview()
-  execute 'keeppatterns' . a:line1 . ',' . a:line2 . 's/' . g:whitespace_melt . '\+$\|' . g:whitespace_burn . '\+//ge'
+  execute 'keeppatterns' a:line1 . ',' . a:line2 . 's/' . g:whitespace_melt . '\+$\|' . g:whitespace_burn . '\+//ge'
   call winrestview(l:view)
 endfunction
 
