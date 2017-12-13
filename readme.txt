@@ -246,7 +246,134 @@ augroup whitespace
   autocmd InsertLeave,BufRead,WinEnter * call whitespace#insertleave()
 augroup END
 
+
+
+AUTOCMD
+
 http://vimhelp.appspot.com/autocmd.txt.html
-http://vimhelp.appspot.com/eval.txt.html#%3Acall
+
+BufWritePre
+InsertEnter
+InsertLeave,BufRead,WinEnter
+
+
+vim /root/.vimrc
+
+BufReadPre
+"~/.vimrc" 272L, 7999C
+BufRead
+BufReadPost
+Syntax
+FileType
+BufWinEnter
+BufEnter
+VimEnter
+
+
+vim /root/.vimrc
+edit /etc/rc.conf
+
+BufNew
+BufAdd
+BufCreate
+User
+BufLeave
+BufWinLeave
+BufUnload
+BufReadPre
+"/etc/rc.conf" 14L, 348C
+BufRead
+BufReadPost
+BufEnter
+BufWinEnter
+
+
+vim /root/.vimrc
+edit /root/.gitconfig
+
+BufNew
+BufAdd
+BufCreate
+User
+BufLeave
+BufWinLeave
+BufUnload
+BufReadPre
+"~/.gitconfig" 7L, 116C
+BufRead
+BufReadPost
+Syntax
+FileType
+Syntax
+FileType
+BufEnter
+BufWinEnter
+
+
+vim /root/.vimrc
+split /root/.vimrc
+
+WinLeave
+WinNew
+WinEnter
+BufEnter
+BufWinEnter
+".vimrc" 272 lines --0%--
+
+
+vim -p /root/.vimrc /root/.gitconfig
+
+TabLeave
+TabEnter
+BufReadPre
+"~/.vimrc" 272L, 7999C
+BufRead
+BufReadPost
+Syntax
+FileType
+BufWinEnter
+TabLeave
+TabEnter
+TabLeave
+TabEnter
+BufEnter
+TabLeave
+TabEnter
+BufReadPre
+"~/.gitconfig" 7L, 116C
+BufRead
+BufReadPost
+Syntax
+FileType
+Syntax
+FileType
+BufWinEnter
+TabLeave
+TabEnter
+VimEnter
+
+
+vim -p /root/.vimrc /root/.gitconfig
+tabn
+
+BufLeave
+WinLeave
+TabLeave
+WinEnter
+TabEnter
+BufEnter
+
+
+CTRL W S
+
+WinLeave
+WinNew
+WinEnter
+
+
+CTRL W W
+
+WinLeave
+WinEnter
 
 
