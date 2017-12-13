@@ -112,11 +112,16 @@ http://vimhelp.appspot.com/eval.txt.html#winrestview%28%29
 https://stackoverflow.com/questions/19762869/how-do-i-save-the-current-cursor-position-and-load-it-later-in-vimscript
 
 
-execute 'keeppatterns' . a:line1 . ',' . a:line2 . 's/\s\+$\|[\U000B\U000C\U0085]\+//ge'
+execute 'keeppatterns' a:line1 . ',' . a:line2 . 's/\s\+$\|[\U000B\U000C\U0085]\+//ge'
 
 http://vimhelp.appspot.com/eval.txt.html#%3Aexecute
+https://vi.stackexchange.com/questions/9644/how-to-use-a-variable-in-the-expression-of-a-normal-command
+
 http://vimhelp.appspot.com/cmdline.txt.html#%3Akeeppatterns
 http://vimhelp.appspot.com/change.txt.html#%3Asubstitute      :[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
+http://vimhelp.appspot.com/cmdline.txt.html#cmdline-ranges    % equal to 1,$ (the entire file)
+http://vimhelp.appspot.com/usr_10.txt.html#10.3
+
 
 
 /\s\+$
@@ -169,7 +174,7 @@ http://vimhelp.appspot.com/eval.txt.html#%3Acall
 
 function! whitespace#bufwritepre()
   if g:whitespace_wipe == 1 && index(g:whitespace_skip, &filetype) < 0
-    call whitespace#wipe(0, line('$'))
+    call whitespace#wipe(1, '$')
   endif
 endfunction
 
