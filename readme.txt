@@ -68,6 +68,15 @@ https://github.com/ntpeters/vim-better-whitespace
 
 
 
+HELP
+
+http://vimhelp.appspot.com/
+
+http://vimhelp.appspot.com/eval.txt.html#functions
+http://vimhelp.appspot.com/eval.txt.html#internal-variables
+
+
+
 CODE
 
 if exists('g:loaded_whitespace') || &compatible
