@@ -26,7 +26,7 @@ augroup END
 
 function! whitespace#bufwritepre()
   if g:whitespace_wipe == 1 && index(g:whitespace_skip, &filetype) < 0
-    call whitespace#wipe(0, line('$'))
+    call whitespace#wipe(1, '$')
   endif
 endfunction
 
