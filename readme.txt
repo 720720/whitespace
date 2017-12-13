@@ -179,18 +179,6 @@ http://vimhelp.appspot.com/change.txt.html#%3As_flags         ge
 
 
 
-augroup whitespace
-  autocmd!
-  autocmd BufWritePre * call whitespace#bufwritepre()
-  autocmd InsertEnter * call whitespace#insertenter()
-  autocmd InsertLeave,BufRead,WinEnter * call whitespace#insertleave()
-augroup END
-
-http://vimhelp.appspot.com/autocmd.txt.html
-http://vimhelp.appspot.com/eval.txt.html#%3Acall
-
-
-
 function! whitespace#bufwritepre()
   if g:whitespace_wipe == 1 && index(g:whitespace_skip, &filetype) < 0
     call whitespace#wipe(1, '$')
@@ -248,5 +236,17 @@ http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B         /\+
 or
 
 http://vimhelp.appspot.com/pattern.txt.html#%2Fpattern        \|
+
+
+
+augroup whitespace
+  autocmd!
+  autocmd BufWritePre * call whitespace#bufwritepre()
+  autocmd InsertEnter * call whitespace#insertenter()
+  autocmd InsertLeave,BufRead,WinEnter * call whitespace#insertleave()
+augroup END
+
+http://vimhelp.appspot.com/autocmd.txt.html
+http://vimhelp.appspot.com/eval.txt.html#%3Acall
 
 
