@@ -55,6 +55,9 @@ https://www.guyrutenberg.com/2013/12/07/highlight-whitespace-at-end-of-line-in-v
 http://vimcasts.org/episodes/tidying-whitespace/
 http://sartak.org/2011/03/end-of-line-whitespace-in-vim.html
 
+https://www.reddit.com/r/vim/comments/29lunc/is_there_such_a_thing_as_a_sideeffect_free_macro/
+https://technotales.wordpress.com/2010/03/31/preserve-a-vim-function-that-keeps-your-state/
+
 
 
 PLUGINS
@@ -94,6 +97,12 @@ http://vimhelp.appspot.com/eval.txt.html#get%28%29
 command -range=% Wipe call whitespace#wipe(<line1>, <line2>)
 
 http://vimhelp.appspot.com/usr_40.txt.html#40.2
+http://vimhelp.appspot.com/map.txt.html#user-commands
+http://vimhelp.appspot.com/map.txt.html#%3Acommand-range
+http://vimhelp.appspot.com/map.txt.html#%3Cline1%3E
+http://vimhelp.appspot.com/map.txt.html#%3Cline2%3E
+http://vimhelp.appspot.com/map.txt.html#%3Cmods%3E
+
 http://vimhelp.appspot.com/eval.txt.html#%3Acall
 http://vimhelp.appspot.com/eval.txt.html#%3Afunction
 https://stackoverflow.com/questions/18178768/vimscript-call-vs-execute
@@ -110,6 +119,7 @@ http://vimhelp.appspot.com/eval.txt.html#user-functions
 http://vimhelp.appspot.com/eval.txt.html#winsaveview%28%29
 http://vimhelp.appspot.com/eval.txt.html#winrestview%28%29
 https://stackoverflow.com/questions/19762869/how-do-i-save-the-current-cursor-position-and-load-it-later-in-vimscript
+https://vi.stackexchange.com/questions/6036/how-to-save-previous-cursor-position-inside-a-function-which-has-received-a-rang
 
 
 execute 'keeppatterns' a:line1 . ',' . a:line2 . 's/\s\+$\|[\U000B\U000C\U0085]\+//ge'
@@ -119,9 +129,9 @@ https://vi.stackexchange.com/questions/9644/how-to-use-a-variable-in-the-express
 
 http://vimhelp.appspot.com/cmdline.txt.html#%3Akeeppatterns
 http://vimhelp.appspot.com/change.txt.html#%3Asubstitute      :[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
-http://vimhelp.appspot.com/cmdline.txt.html#cmdline-ranges    % equal to 1,$ (the entire file)
-http://vimhelp.appspot.com/usr_10.txt.html#10.3
 
+http://vimhelp.appspot.com/usr_10.txt.html#10.3
+http://vimhelp.appspot.com/cmdline.txt.html#cmdline-ranges    % equal to 1,$ (the entire file)
 
 
 /\s\+$
