@@ -1,0 +1,229 @@
+http://vimhelp.appspot.com/autocmd.txt.html#autocmd-events
+http://vimhelp.appspot.com/autocmd.txt.html#autocmd-events-abc
+http://vimhelp.appspot.com/autocmd.txt.html#Cmd-event
+
+augroup events
+autocmd!
+autocmd BufAdd * echom 'BufAdd'
+autocmd BufCreate * echom 'BufCreate'
+autocmd BufDelete * echom 'BufDelete'
+autocmd BufEnter * echom 'BufEnter'
+autocmd BufFilePost * echom 'BufFilePost'
+autocmd BufFilePre * echom 'BufFilePre'
+autocmd BufHidden * echom 'BufHidden'
+autocmd BufLeave * echom 'BufLeave'
+autocmd BufNew * echom 'BufNew'
+autocmd BufNewFile * echom 'BufNewFile'
+autocmd BufRead * echom 'BufRead'
+" autocmd BufReadCmd * echom 'BufReadCmd'
+autocmd BufReadPost * echom 'BufReadPost'
+autocmd BufReadPre * echom 'BufReadPre'
+autocmd BufUnload * echom 'BufUnload'
+autocmd BufWinEnter * echom 'BufWinEnter'
+autocmd BufWinLeave * echom 'BufWinLeave'
+autocmd BufWipeout * echom 'BufWipeout'
+autocmd BufWrite * echom 'BufWrite'
+" autocmd BufWriteCmd * echom 'BufWriteCmd'
+autocmd BufWritePost * echom 'BufWritePost'
+autocmd BufWritePre * echom 'BufWritePre'
+" autocmd CmdUndefined * echom 'CmdUndefined'
+" autocmd CmdwinEnter * echom 'CmdwinEnter'
+" autocmd CmdwinLeave * echom 'CmdwinLeave'
+autocmd ColorScheme * echom 'ColorScheme'
+autocmd CompleteDone * echom 'CompleteDone'
+" autocmd CursorHold * echom 'CursorHold'
+" autocmd CursorHoldI * echom 'CursorHoldI'
+" autocmd CursorMoved * echom 'CursorMoved'
+" autocmd CursorMovedI * echom 'CursorMovedI'
+autocmd EncodingChanged * echom 'EncodingChanged'
+" autocmd FileAppendCmd * echom 'FileAppendCmd'
+autocmd FileAppendPost * echom 'FileAppendPost'
+autocmd FileAppendPre * echom 'FileAppendPre'
+autocmd FileChangedRO * echom 'FileChangedRO'
+autocmd FileChangedShell * echom 'FileChangedShell'
+autocmd FileChangedShellPost * echom 'FileChangedShellPost'
+" autocmd FileReadCmd * echom 'FileReadCmd'
+autocmd FileReadPost * echom 'FileReadPost'
+autocmd FileReadPre * echom 'FileReadPre'
+autocmd FileType * echom 'FileType'
+" autocmd FileWriteCmd * echom 'FileWriteCmd'
+autocmd FileWritePost * echom 'FileWritePost'
+autocmd FileWritePre * echom 'FileWritePre'
+autocmd FilterReadPost * echom 'FilterReadPost'
+autocmd FilterReadPre * echom 'FilterReadPre'
+autocmd FilterWritePost * echom 'FilterWritePost'
+autocmd FilterWritePre * echom 'FilterWritePre'
+autocmd FocusGained * echom 'FocusGained'
+autocmd FocusLost * echom 'FocusLost'
+autocmd FuncUndefined * echom 'FuncUndefined'
+autocmd GUIEnter * echom 'GUIEnter'
+autocmd GUIFailed * echom 'GUIFailed'
+autocmd InsertChange * echom 'InsertChange'
+autocmd InsertCharPre * echom 'InsertCharPre'
+autocmd InsertEnter * echom 'InsertEnter'
+autocmd InsertLeave * echom 'InsertLeave'
+autocmd MenuPopup * echom 'MenuPopup'
+autocmd OptionSet * echom 'OptionSet'
+" autocmd QuickFixCmdPost * echom 'QuickFixCmdPost'
+" autocmd QuickFixCmdPre * echom 'QuickFixCmdPre'
+autocmd QuitPre * echom 'QuitPre'
+autocmd RemoteReply * echom 'RemoteReply'
+autocmd SessionLoadPost * echom 'SessionLoadPost'
+" autocmd ShellCmdPost * echom 'ShellCmdPost'
+autocmd ShellFilterPost * echom 'ShellFilterPost'
+" autocmd SourceCmd * echom 'SourceCmd'
+" autocmd SourcePre * echom 'SourcePre'
+autocmd SpellFileMissing * echom 'SpellFileMissing'
+autocmd StdinReadPost * echom 'StdinReadPost'
+autocmd StdinReadPre * echom 'StdinReadPre'
+autocmd SwapExists * echom 'SwapExists'
+autocmd Syntax * echom 'Syntax'
+autocmd TabClosed * echom 'TabClosed'
+autocmd TabEnter * echom 'TabEnter'
+autocmd TabLeave * echom 'TabLeave'
+autocmd TabNew * echom 'TabNew'
+autocmd TermChanged * echom 'TermChanged'
+autocmd TermResponse * echom 'TermResponse'
+autocmd TextChanged * echom 'TextChanged'
+autocmd TextChangedI * echom 'TextChangedI'
+autocmd User * echom 'User'
+autocmd VimEnter * echom 'VimEnter'
+autocmd VimLeave * echom 'VimLeave'
+autocmd VimLeavePre * echom 'VimLeavePre'
+autocmd VimResized * echom 'VimResized'
+autocmd WinEnter * echom 'WinEnter'
+autocmd WinLeave * echom 'WinLeave'
+autocmd WinNew * echom 'WinNew'
+augroup END
+
+
+
+augroup whitespace
+  autocmd!
+  autocmd BufWritePre * call whitespace#bufwritepre()
+  autocmd InsertEnter * call whitespace#insertenter()
+  autocmd InsertLeave,BufRead,WinEnter * call whitespace#insertleave()
+augroup END
+
+
+
+vim /root/.vimrc
+
+BufReadPre
+"~/.vimrc" 272L, 7999C
+BufRead
+BufReadPost
+Syntax
+FileType
+BufWinEnter
+BufEnter
+VimEnter
+
+
+vim /root/.vimrc
+edit /etc/rc.conf
+
+BufNew
+BufAdd
+BufCreate
+User
+BufLeave
+BufWinLeave
+BufUnload
+BufReadPre
+"/etc/rc.conf" 14L, 348C
+BufRead
+BufReadPost
+BufEnter
+BufWinEnter
+
+
+vim /root/.vimrc
+edit /root/.gitconfig
+
+BufNew
+BufAdd
+BufCreate
+User
+BufLeave
+BufWinLeave
+BufUnload
+BufReadPre
+"~/.gitconfig" 7L, 116C
+BufRead
+BufReadPost
+Syntax
+FileType
+Syntax
+FileType
+BufEnter
+BufWinEnter
+
+
+vim /root/.vimrc
+split /root/.vimrc
+
+WinLeave
+WinNew
+WinEnter
+BufEnter
+BufWinEnter
+".vimrc" 272 lines --0%--
+
+
+vim -p /root/.vimrc /root/.gitconfig
+
+TabLeave
+TabEnter
+BufReadPre
+"~/.vimrc" 272L, 7999C
+BufRead
+BufReadPost
+Syntax
+FileType
+BufWinEnter
+TabLeave
+TabEnter
+TabLeave
+TabEnter
+BufEnter
+TabLeave
+TabEnter
+BufReadPre
+"~/.gitconfig" 7L, 116C
+BufRead
+BufReadPost
+Syntax
+FileType
+Syntax
+FileType
+BufWinEnter
+TabLeave
+TabEnter
+VimEnter
+
+
+vim -p /root/.vimrc /root/.gitconfig
+tabn
+
+BufLeave
+WinLeave
+TabLeave
+WinEnter
+TabEnter
+BufEnter
+
+
+CTRL W S
+
+WinLeave
+WinNew
+WinEnter
+
+
+CTRL W W
+
+WinLeave
+WinEnter
+
+
