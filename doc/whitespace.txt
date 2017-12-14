@@ -1,0 +1,17 @@
+*whitespace.txt*                 The last whitespace plugin you will ever need
+
+         _      ____ _______________________  ___  _________
+        | | /| / / // /  _/_  __/ __/ __/ _ \/ _ |/ ___/ __/
+        | |/ |/ / _  // /  / / / _/_\ \/ ___/ __ / /__/ _/
+        |__/|__/_//_/___/ /_/ /___/___/_/  /_/ |_\___/___/
+
+==============================================================================
+Contents                                                 *whitespace-contents*
+
+        1. Introduction   |whitespace-introduction|
+
+==============================================================================
+Introduction                                         *whitespace-introduction*
+
+Displays and removes trailing and unwanted whitespace characters.
+Written in pure Vimscript for Vim 7.4.083 and newer.
