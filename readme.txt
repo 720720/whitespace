@@ -171,9 +171,8 @@ replace a match of {pattern} with {string}
 http://vimhelp.appspot.com/change.txt.html#%3Asubstitute      //
 
 
-ge
-replace all occurrences in the line
-do not issue an error message
+g   replace all occurrences in the line
+e   do not issue an error message
 
 http://vimhelp.appspot.com/change.txt.html#%3As_flags         ge
 
@@ -214,6 +213,8 @@ http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%2B         /\+
 http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%25%23      /\%#
 http://vimhelp.appspot.com/pattern.txt.html#%2F%5C%40%3C%21   /\@<!
 http://vimhelp.appspot.com/pattern.txt.html#%2F%24            /$
+
+https://stackoverflow.com/questions/41867413/vim-script-highlight-regex-matches-on-cursor-line
 
 
 /\s\+$
